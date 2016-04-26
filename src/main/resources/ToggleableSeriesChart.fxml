@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<fx:root type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="checkboxContainer" spacing="5.0" HBox.hgrow="SOMETIMES">
+            <HBox.margin>
+                <Insets bottom="12.0" left="12.0" top="12.0"/>
+            </HBox.margin>
+            <children>
+                <Label text="Series"/>
+            </children>
+        </VBox>
+    </children>
+</fx:root>

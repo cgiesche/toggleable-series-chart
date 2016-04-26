@@ -1,0 +1,20 @@
+<?import de.perdoctus.fx.ToggleableSeriesChart?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.perdoctus.fx.DemoController">
+    <children>
+        <ToggleableSeriesChart fx:id="chart" HBox.hgrow="ALWAYS">
+            <chart>
+                <AreaChart animated="false">
+                    <xAxis>
+                        <NumberAxis side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT"/>
+                    </yAxis>
+                </AreaChart>
+            </chart>
+        </ToggleableSeriesChart>
+    </children>
+</HBox>
