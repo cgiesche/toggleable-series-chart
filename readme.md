@@ -3,7 +3,9 @@
 **Toggleable Series Chart for JavaFX**
 
 This is a JavaFX control that wraps an XYChart (LineChart, AreaChart etc.) and adds a visibility-toggle checkbox for each series of the chart. It is not very customizable yet. Feel free to contribute if you need more features ;)
+
 This is how it looks like in action:
+
 ![Sample Image](docs/sample.gif "Foo")
 
 **Getting started**
