@@ -1,16 +1,18 @@
-[![Build Status](https://travis-ci.org/cgiesche/toggleable-series-chart.svg?branch=master)](https://travis-ci.org/cgiesche/toggleable-series-chart) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.perdoctus.fx/toggleable-series-chart/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.perdoctus.fx%22%20AND%20a%3A%22toggleable-series-chart%22)
+[![Build Status](https://travis-ci.org/cgiesche/toggleable-series-chart.svg?branch=master)](https://travis-ci.org/cgiesche/toggleable-series-chart) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.perdoctus.fx/toggleable-series-chart/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.perdoctus.fx%22%20AND%20a%3A%22toggleable-series-chart%22) [![Dependency Status](https://www.versioneye.com/user/projects/57231f32ba37ce00350af2e1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57231f32ba37ce00350af2e1)
 
 **Toggleable Series Chart for JavaFX**
 
-This is a JavaFX control that adds toggles to each series of any JavaFX XYChart. This is how it looks like in action:
+This is a JavaFX control that wraps an XYChart (LineChart, AreaChart etc.) and adds a visibility-toggle checkbox for each series of the chart. It is not very customizable yet. Feel free to contribute if you need more features ;)
+This is how it looks like in action:
 ![Sample Image](docs/sample.gif "Foo")
 
-**Usage**
+**Getting started**
 
 FXML
 ```xml
 <ToggleableSeriesChart fx:id="chart" HBox.hgrow="ALWAYS">
     <chart>
+        <!-- You can add any type of XYChart here -->
         <AreaChart animated="false">
             <xAxis>
                 <NumberAxis side="BOTTOM"/>
