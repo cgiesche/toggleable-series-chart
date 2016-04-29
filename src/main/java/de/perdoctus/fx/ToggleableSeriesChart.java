@@ -26,8 +26,6 @@ package de.perdoctus.fx;
  * #L%
  */
 
-
-import javafx.beans.InvalidationListener;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -72,12 +70,11 @@ public class ToggleableSeriesChart<X, Y> extends HBox {
         data.addListener((ListChangeListener<XYChart.Series<X, Y>>) c -> {
             while (c.next()) {
                 c.getAddedSubList().forEach(this::createCheckboxForSeries);
-                c.getRemoved().forEach(r -> checkboxContainer.getChildren().remove(seriesCheckBoxMap.get(r)));
+                c.getRemoved().forEach(r -> {
+                    chart.getValue().getData().remove(r);
+                    checkboxContainer.getChildren().remove(seriesCheckBoxMap.remove(r));
+                });
             }
-        });
-        data.addListener((InvalidationListener) observable -> {
-            chart.getValue().getData().clear();
-            checkboxContainer.getChildren().clear();
         });
     }
 

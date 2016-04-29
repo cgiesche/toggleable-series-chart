@@ -27,6 +27,7 @@ package de.perdoctus.fx;
  */
 
 
+import javafx.event.ActionEvent;
 import javafx.scene.chart.XYChart;
 
 public class DemoController {
@@ -41,7 +42,7 @@ public class DemoController {
         final XYChart.Series<Number, Number> series3 = new XYChart.Series<>();
         series3.setName("cos(x)");
 
-        for (double i = -1 * Math.PI; i <= Math.PI; i = i + 0.01d) {
+        for (double i = -1 * Math.PI; i <= Math.PI; i = i + 0.2d) {
             series1.getData().add(new XYChart.Data<>(i, (i * i) - 1));
             series2.getData().add(new XYChart.Data<>(i, Math.sin(i)));
             series3.getData().add(new XYChart.Data<>(i, Math.cos(i)));
@@ -50,4 +51,7 @@ public class DemoController {
         chart.getData().addAll(series1, series2, series3);
     }
 
+    public void clear(ActionEvent actionEvent) {
+        chart.getData().clear();
+    }
 }

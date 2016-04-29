@@ -1,6 +1,7 @@
 <?import de.perdoctus.fx.ToggleableSeriesChart?>
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 <HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.perdoctus.fx.DemoController">
     <children>
@@ -16,5 +17,6 @@
                 </AreaChart>
             </chart>
         </ToggleableSeriesChart>
+        <Button onAction="#clear" text="Clear" visible="false"/>
     </children>
 </HBox>
