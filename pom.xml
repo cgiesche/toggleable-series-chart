@@ -6,7 +6,7 @@
 
     <groupId>de.perdoctus.fx</groupId>
     <artifactId>toggleable-series-chart</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>Toggleable Series Chart</name>
     <description>A JavaFX XYChart-Wrapper that adds toggle-checkboxes for each series.</description>
